@@ -8,17 +8,19 @@ public class BuildSnowman : MonoBehaviour
     public GameObject armTwo;
 
     public GameObject playerMiddle;
+    public GameObject playerHead;
+    public GameObject buildMiddle;
 
     public static bool doesHaveEyes = false;
 
     public void Build()
     {
-        if (carrot && armOne && armTwo && doesHaveEyes)
+        if (!carrot.activeSelf && !armOne.activeSelf && !armTwo.activeSelf && doesHaveEyes == true)
         {
             
             CheckIfMiddle();
         }
-        else
+        else 
         {
             Debug.Log("We need more materials");
         }
@@ -43,5 +45,7 @@ public class BuildSnowman : MonoBehaviour
             Debug.Log("Need to pick up the Middle First");
         }
     }
+
+    
 
 }

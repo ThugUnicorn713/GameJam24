@@ -157,13 +157,14 @@ public class KidTalks : MonoBehaviour
             triggerCollider.enabled = false;
         }
         
-        playerRB.constraints = RigidbodyConstraints2D.None;
+        playerRB.constraints = RigidbodyConstraints2D.FreezeRotation;
+        
 
     }
 
     public void UnfreezePlayer()
     {
-        playerRB.constraints = RigidbodyConstraints2D.None;
+        playerRB.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
 }
