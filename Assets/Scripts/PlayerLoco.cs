@@ -12,9 +12,6 @@ public class PlayerLoco : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
     public LayerMask interactableLayer;
-
-    
-
     
     private float horzional;
 
@@ -61,6 +58,14 @@ public class PlayerLoco : MonoBehaviour
                 if(interactScript != null)
                 {
                     interactScript.OnInteract();
+                }
+
+                KidTalks talkScript = interactable.GetComponent<KidTalks>();
+                if(talkScript != null)
+                {
+                    talkScript.InteractWithKid();
+                    rb.constraints = RigidbodyConstraints2D.FreezePosition;
+
                 }
             }   
     }
