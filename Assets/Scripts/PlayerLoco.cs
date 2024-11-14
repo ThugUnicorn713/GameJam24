@@ -133,6 +133,15 @@ public class PlayerLoco : MonoBehaviour
         
      }
 
+    void OnCollisionenter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Zone3"))
+        {
+            this.transform.rotation = Quaternion.Euler(0f, 0f, -0f);
+        }
+
+    }
+
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
