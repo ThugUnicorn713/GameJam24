@@ -8,6 +8,7 @@ public class StopForce : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerLoco.isInSecondZone = false;
+            CameraMove.ToggleCameraClamp(true);
 
         }
     }

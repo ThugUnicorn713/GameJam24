@@ -121,25 +121,20 @@ public class PlayerLoco : MonoBehaviour
         {
             pushPower = 50f;
         }
-        
-     }
+
+        if (collision.gameObject.CompareTag("Zone3"))
+        {
+            this.transform.rotation = Quaternion.Euler(0f, 0f, -0f);
+        }
+    }
 
     void OnCollisionExit2D(Collision2D collision)
-     {
+    {
         if (collision.gameObject.CompareTag("Ice"))
         {
             this.transform.rotation = Quaternion.Euler(0f, 0f, -35f);
         }
         
-     }
-
-    void OnCollisionenter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Zone3"))
-        {
-            this.transform.rotation = Quaternion.Euler(0f, 0f, -0f);
-        }
-
     }
 
     private bool IsGrounded()
