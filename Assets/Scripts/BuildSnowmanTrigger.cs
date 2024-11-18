@@ -34,7 +34,7 @@ public class BuildSnowmanTrigger : MonoBehaviour
             falseGround.SetActive(false);
             CameraMove.ToggleCameraClamp(false);
             PlayerLoco.isInFirstZone = false;
-            PlayerLoco.isInSecondZone = true;
+            //PlayerLoco.isInSecondZone = true;
         }
 
     }

@@ -11,6 +11,11 @@ public class BuildSnowman : MonoBehaviour
     public GameObject playerHead;
     public GameObject buildMiddle;
 
+    public GameObject playerBubble;
+    public GameObject needMoreText;
+    public GameObject middleFirstText;
+
+
     public static bool doesHaveEyes = false;
 
     public void Build()
@@ -23,6 +28,8 @@ public class BuildSnowman : MonoBehaviour
         else 
         {
             Debug.Log("We need more materials");
+            MoreMaterialsText();
+            Invoke(nameof(TurnOffMoreMaterials), 1f);
         }
 
     }
@@ -43,9 +50,36 @@ public class BuildSnowman : MonoBehaviour
         else
         {
             Debug.Log("Need to pick up the Middle First");
+            MiddleText();
+            Invoke(nameof(TurnOffMiddleText), 3f);
         }
     }
 
-    
+    public void MoreMaterialsText()
+    {
+        playerBubble.SetActive(true);
+        needMoreText.gameObject.SetActive(true);
+
+    }
+
+    public void TurnOffMoreMaterials()
+    {
+        playerBubble.SetActive(false);
+        needMoreText.gameObject.SetActive(false);
+
+    }
+
+    public void MiddleText()
+    {
+        playerBubble.SetActive(true);
+        middleFirstText.gameObject.SetActive(true);
+
+    }
+
+    public void TurnOffMiddleText()
+    {
+        playerBubble.SetActive(false);
+        middleFirstText.gameObject.SetActive(false);
+    }
 
 }

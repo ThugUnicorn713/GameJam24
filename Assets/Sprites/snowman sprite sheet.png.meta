@@ -399,7 +399,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      snowman sprite sheet_0: -3247250283413183708
+      snowman sprite sheet_1: 4379997327175511751
+      snowman sprite sheet_2: -3315204351565128281
+      snowman sprite sheet_3: -8826602264690432105
+      snowman sprite sheet_4: 5795382194236049186
+      snowman sprite sheet_5: -5123144775133300738
+      snowman sprite sheet_6: -134188266267984951
+      snowman sprite sheet_7: -8340525184569192611
+      snowman sprite sheet_8: 6426903875679359480
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

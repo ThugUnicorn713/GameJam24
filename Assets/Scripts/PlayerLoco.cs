@@ -115,18 +115,26 @@ public class PlayerLoco : MonoBehaviour
         
     }
 
-     void OnCollisionEnter2D(Collision2D collision)
-     {
+    void OnCollisionEnter2D(Collision2D collision)
+    {
         if (collision.gameObject.CompareTag("Ice"))
         {
             pushPower = 50f;
+            isInSecondZone = true;
         }
 
         if (collision.gameObject.CompareTag("Zone3"))
         {
             this.transform.rotation = Quaternion.Euler(0f, 0f, -0f);
+            isInSecondZone = false;
         }
-    }
+
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            this.transform.rotation = Quaternion.Euler(0f, 0f, -0f);
+        }
+
+    }  
 
     void OnCollisionExit2D(Collision2D collision)
     {
