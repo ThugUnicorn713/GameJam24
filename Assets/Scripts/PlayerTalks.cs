@@ -17,12 +17,12 @@ public class PlayerTalks : MonoBehaviour
     {
         if (startText.activeSelf)
         {
-            Invoke(nameof(SecondText), 6f);
+            Invoke(nameof(SecondText), 3f);
         }
 
         if(goToStoreText.activeSelf)
         {
-            Invoke(nameof(TurnOffPlayerBubble), 6f);
+            Invoke(nameof(TurnOffPlayerBubble), 3f);
         }
     }
 

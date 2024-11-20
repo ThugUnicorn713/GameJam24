@@ -23,7 +23,9 @@ public class PlayerLoco : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        isInFirstZone = true; 
+        isInFirstZone = true;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        Invoke(nameof(UnfreezePlayer), 3f);
     }
 
     public void Update()
@@ -158,5 +160,10 @@ public class PlayerLoco : MonoBehaviour
     public void AddPush()
     {
         rb.AddForce(new Vector2(1, 0) * pushPower);
+    }
+
+    public void UnfreezePlayer()
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }

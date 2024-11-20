@@ -6,8 +6,9 @@ public class CameraMove : MonoBehaviour
     public Transform player;
     public float yPosition = 6.48f;
     public float zPosition = 0f;
-    public static bool isClamped = true;
 
+    public static bool isClamped = true;
+   
     private void LateUpdate()
     {
         if (player != null)
